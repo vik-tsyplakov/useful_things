@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+  </head>
+  <body>
+    <pre>
+        "Игра 'Угадай число'". Суть игры - угадать за меньшее количество попыток число, которое загадал сценарий.
+        Каждый раз, когда игрок пытается угадать число, сценарий выводит подсказку - меньшее или большее число было загадано сценарием.
+        Сценарий загадывает число только один раз в начале игры и это число не меняется до завершения игры.
+    </pre>
+    <script>
+      alert(
+        "Игра 'Угадай число' \r\nЧисло было загадано компьютером от 0 до 100!"
+      );
+      let randomValue = Math.floor(Math.random() * 101);
+      let i = 0;
+      let userValue = +prompt("Введите свое число!");
+
+      if (isNaN(userValue)) {
+        userValue = +prompt("Вы ввели не числовое значение! Попробуйте снова!");
+      } else {
+        while (randomValue !== userValue) {
+          i++;
+          if (randomValue < userValue) {
+            userValue = +prompt(
+              "Загаданное число меньше введенного Вами! Попробуйте снова!"
+            );
+          } else {
+            userValue = +prompt(
+              "Загаданное число больше введенного Вами! Попробуйте снова!"
+            );
+          }
+        }
+        alert(
+          `Вы угадали число с ${i}-ой попытки! Было загадано - ${randomValue}`
+        );
+      }
+    </script>
+  </body>
+</html>
