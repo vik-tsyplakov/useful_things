@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The first positive element of the array</title>
+  </head>
+  <body>
+    <pre>
+      первый положительный элемент массива и выведите его на экран  // the first positive element of the array
+    </pre>
+    <script>
+      let values = [-1, 100, -5, -6, -3, -10, -5, 3, 4, -1, -8, 1, -10, 3];
+
+      for (i = 0; i < values.length; i++) {
+        let element = values[i];
+        if (element > 0) {
+          alert(`первый положительный элемент массива = ${element}`);
+          console.log(`первый положительный элемент массива =  ${element}`);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
