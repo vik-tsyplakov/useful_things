@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding negative array values and replacing with zero</title>
+  </head>
+  <body>
+    <pre>
+      Finding negative array values and replacing with zero  // Поиск отрицательных значений массива и замена на ноль
+    </pre>
+    <script>
+      let values = [10, 20, -2, 6, 11, -10, 125, -3, 8, 0, 3];
+
+      for (let i = 0; i < values.length; i++) {
+        let element = values[i];
+        if (element < 0) {
+          values[i] = 0;
+        }
+      }
+
+      console.log(values);
+    </script>
+  </body>
+</html>
