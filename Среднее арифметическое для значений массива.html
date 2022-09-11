@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      let values = [
+        10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28,
+      ];
+      console.log(`Оригинальный массив ${values}`);
+      let sum = 0;
+      for (const element of values) {
+        sum += element;
+      }
+      console.log(sum);
+      let arithmeticalMean = Math.round(sum / values.length);
+      console.log(`Среднее арифметическое = ${arithmeticalMean}`);
+
+      for (i = 0; i < values.length; i++) {
+        const element = values[i];
+        if (element > arithmeticalMean) {
+          console.log(element);
+        }
+      }
+    </script>
+  </body>
+</html>
