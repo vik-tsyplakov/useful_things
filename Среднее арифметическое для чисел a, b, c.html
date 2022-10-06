@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <pre>
+        Задание:
+        Создайте функцию avg(a, b, c), которая возвращает среднее арифметическое для чисел a, b, c
+        Если параметр отсутствует - не используйте значение для расчета среднего арифметического значения.
+    </pre>
+    <script>
+      function avg(a, b, c) {
+        if (a >= 0 && b == undefined && c == undefined) {
+          console.log(`Недостаточно значений для расчета`);
+          return;
+        }
+        if (c == undefined) {
+          let result = (a + b) / 2;
+          console.log(
+            `Среднее арифметическое для чисел ${a}, ${b} = ${result}`
+          );
+          return result;
+        } else {
+          let result = (a + b + c) / 3;
+          console.log(
+            `Среднее арифметическое для чисел ${a}, ${b}, ${c} = ${result}`
+          );
+          return result;
+        }
+      }
+    </script>
+  </body>
+</html>
